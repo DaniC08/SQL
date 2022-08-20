@@ -1,0 +1,33 @@
+CREATE TABLE Grenudas_Designs (id INTEGER PRIMARY KEY,product_name TEXT, product_qty INTEGER, product_cost NUMERIC, total NUMERIC);
+
+INSERT INTO Grenudas_Designs VALUES (1, "20oz sunflower", 3,35,105);
+INSERT INTO Grenudas_Designs VALUES (2, "20oz cheetah", 5,35,175);
+INSERT INTO Grenudas_Designs VALUES (3, "30oz grinch", 4,45,225);
+INSERT INTO Grenudas_Designs VALUES (4, "30oz jack and sally", 7,45,315);
+INSERT INTO Grenudas_Designs VALUES (5, "30oz oogie boogie", 5,45,225);
+INSERT INTO Grenudas_Designs VALUES (6, "20oz Michael Myers", 6,35,210);
+INSERT INTO Grenudas_Designs VALUES (7, "20oz Freddy", 7,35,245);
+INSERT INTO Grenudas_Designs VALUES (8, "30oz Pennywise",3,45,140);
+INSERT INTO Grenudas_Designs VALUES (9, "20oz Chucky",6,35,210);
+INSERT INTO Grenudas_Designs VALUES (10, "20oz Scream",8,35,280);
+INSERT INTO Grenudas_Designs VALUES (11, "30oz Cow Print w/name",5,45,225);
+INSERT INTO Grenudas_Designs VALUES (12, "30oz Jack Daniels",8,45,360);
+INSERT INTO Grenudas_Designs VALUES (13, "20 oz Custom Football w/Name",15,45,675);
+INSERT INTO Grenudas_Designs VALUES (14, "30oz Custom Drink w/Name",23,55,1265);
+INSERT INTO Grenudas_Designs VALUES (15, "30oz Custom Picture Tumbler w/Name",27,55,1485);
+
+SELECT * FROM Grenudas_Designs;
+
+--display the products ordered by product name in alphabetical order.
+SELECT * FROM Grenudas_Designs
+ORDER BY product_name ;
+
+--display the product sold to find which are best seller. 
+SELECT * FROM Grenudas_Designs ORDER BY product_qty DESC;
+
+--display the sum for total units of products sold. 
+SELECT SUM(total) as TOTAL_UNITS_OF_ALL_PRODUCTS_SOLD FROM Grenudas_Designs;
+
+--what are the most 5 popular items?
+SELECT product_name, product_qty FROM Grenudas_Designs ORDER BY product_qty DESC;
+
