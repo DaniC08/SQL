@@ -1,3 +1,5 @@
+#In this SQL code, I'm querying a Superstore Database to answer questions about the data. 
+
 CREATE TABLE superstore (
     item_id INTEGER PRIMARY KEY,
     item_name TEXT,
